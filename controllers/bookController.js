@@ -5,6 +5,7 @@ const asyncHandler = require("express-async-handler");
 const { body, validationResult } = require("express-validator");
 
 exports.index = asyncHandler(async (req, res, next) => {
+    
   // Get details of books, book instances, authors and genre counts (in parallel)
   const [
     numBooks,
@@ -52,7 +53,6 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
     });
   });
   
-// Display book create form on GET.
 // Display book create form on GET.
 exports.book_create_get = asyncHandler(async (req, res, next) => {
     // Get all authors and genres, which we can use for adding to our book.

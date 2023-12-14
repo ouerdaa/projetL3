@@ -15,7 +15,7 @@ exports.author_list = asyncHandler(async (req, res, next) => {
   
 
 // Display detail page for a specific Author.
-// Display detail page for a specific Author.
+
 exports.author_detail = asyncHandler(async (req, res, next) => {
     // Get details of author and all their books (in parallel)
     const [author, allBooksByAuthor] = await Promise.all([
@@ -38,14 +38,14 @@ exports.author_detail = asyncHandler(async (req, res, next) => {
   });
   
 // Display Author create form on GET.
-// Display Author create form on GET.
+
 exports.author_create_get = (req, res, next) => {
     res.render("author_form", { title: "Create Author" });
   };
   
 
 // Handle Author create on POST.
-// Handle Author create on POST.
+
 exports.author_create_post = [
     // Validate and sanitize fields.
     body("first_name")
@@ -105,7 +105,6 @@ exports.author_create_post = [
   
 
 // Display Author delete form on GET.
-// Display Author delete form on GET.
 exports.author_delete_get = asyncHandler(async (req, res, next) => {
     // Get details of author and all their books (in parallel)
     const [author, allBooksByAuthor] = await Promise.all([
@@ -126,7 +125,6 @@ exports.author_delete_get = asyncHandler(async (req, res, next) => {
   });
   
 
-// Handle Author delete on POST.
 // Handle Author delete on POST.
 exports.author_delete_post = asyncHandler(async (req, res, next) => {
     // Get details of author and all their books (in parallel)
