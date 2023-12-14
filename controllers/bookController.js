@@ -70,7 +70,7 @@ exports.book_create_get = asyncHandler(async (req, res, next) => {
   
 
 // Handle book create on POST.
-// Handle book create on POST.
+
 exports.book_create_post = [
    
   
@@ -141,7 +141,6 @@ exports.book_delete_post = asyncHandler(async (req, res, next) => {
   res.send("NOT IMPLEMENTED: Book delete POST");
 });
 
-// Display book update form on GET.
 // Display book update form on GET.
 exports.book_update_get = asyncHandler(async (req, res, next) => {
     // Get book, authors  for form.
